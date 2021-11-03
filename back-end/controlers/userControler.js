@@ -17,7 +17,7 @@ const authUsers = asyncHandler( async(req, res)=>{
            isAdmin: user.isAdmin,
            token: generateToken(user._id)
        })
-   }else{
+   }else{  
        res.status(401)
        throw new Error('Invalid email or password')
    }
@@ -54,8 +54,8 @@ const createUser = asyncHandler(async(req, res)=>{
           }
       })
   } else{
-      res.status(400)
-      throw new Error('User not created')
+      res.status(404)
+      throw new Error('Invalid user data')
   }
 
 })

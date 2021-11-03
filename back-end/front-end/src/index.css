@@ -58,8 +58,15 @@ a {
 .l-bold {
   font-weight: bold;
 }
+.image-round-box{
+  width: 80px;
+  height: 80px;
+}
 /* re-useable styles ends */
 .zoom:hover {
   cursor: pointer;
   transform: translateY(1.5%);
 }
+
+
+
