@@ -5,7 +5,7 @@ import Product from'../modules/productModule.js'
 // @route    GET /api/products
 // @access   Public
 
-const getProduct = asyncHandler( async(requestAnimationFrame, res) => {
+const getProduct = asyncHandler( async(req, res) => {
     const products = await Product.find({});
     return res.status(200).json({
         status: "success",
@@ -27,7 +27,7 @@ const getProductById = asyncHandler( async(req, res)=>{
     });
   } else {
     return res.status(404);
-    throw new error('Product not found')
+    throw new Error('Product not found')
   }
 })
 
